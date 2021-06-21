@@ -62,6 +62,7 @@ class _MedReminderState extends State<MedReminder> {
           onPressed: (){
             Navigator.push(context,
                       MaterialPageRoute(builder: (ctx) => AddAlarm()));
+             //MaterialPageRoute(builder: (ctx) => CreateNotificationPage()));
             setState(() {
               index = index + 1;
             });

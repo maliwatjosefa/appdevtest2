@@ -4,8 +4,7 @@ import 'package:appdevnursie/dashboard/journal/post.dart';
 import 'package:appdevnursie/dashboard/journal/postlist.dart';
 import 'package:flutter/material.dart';
 
-
-class ColdsPage extends StatelessWidget {
+class NauseaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,16 +21,8 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   List<Post> posts = [];
 
-  void postClogged() {
-    var post = new Post("COLDS", "Clogged", new DateTime.now().toString());
-    post.setId(savePost(post));
-    this.setState(() {
-      posts.add(post);
-    });
-  }
-
-  void postRunny() {
-    var post = new Post("COUGH", "Runny Nose", new DateTime.now().toString());
+  void postNausea() {
+    var post = new Post("NAUSEA", "Nausea", new DateTime.now().toString());
     post.setId(savePost(post));
     this.setState(() {
       posts.add(post);
@@ -75,7 +66,7 @@ class _BodyState extends State<Body> {
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
                             image:
-                                AssetImage('assets/images/coldsHeader.png')))),
+                                AssetImage('assets/images/nauseaHeader.png')))),
                 new Padding(
                   padding: EdgeInsets.only(top: 55),
                   child: IconButton(
@@ -116,7 +107,7 @@ class _BodyState extends State<Body> {
                                   children: <Widget>[
                                     Text.rich(
                                         TextSpan(
-                                          text: "Colds",
+                                          text: "Nausea",
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -124,9 +115,9 @@ class _BodyState extends State<Body> {
                                         style: TextStyle(fontSize: 50)),
                                   ]),
                               new Container(
-                                padding: EdgeInsets.fromLTRB(28, 110, 30, 1),
+                                padding: EdgeInsets.fromLTRB(32, 105, 40, 1),
                                 child: Text(
-                                  "The common cold is medically referred to as a viral upper respiratory tract infection.",
+                                  "Nausea is stomach discomfort and the sensation of wanting to vomit.",
                                   style: TextStyle(
                                     fontWeight: FontWeight.normal,
                                     fontSize: 18,
@@ -136,8 +127,7 @@ class _BodyState extends State<Body> {
                                 ),
                               ),
                               Container(
-                                height: 210,
-                                  margin: EdgeInsets.only(top: 40),
+                                  margin: EdgeInsets.only(top: 45),
                                   child: Card(
                                       color: Color(0xffe7ecf0),
                                       shape: RoundedRectangleBorder(
@@ -149,10 +139,11 @@ class _BodyState extends State<Body> {
                                             MainAxisAlignment.center,
                                         children: <Widget>[
                                           Container(
-                                            padding: EdgeInsets.only(top: 10),
+                                            padding: EdgeInsets.fromLTRB(
+                                                10, 10, 10, 10),
                                             child: Center(
                                               child: Text(
-                                                "Click on the buttons that are applicable.",
+                                                "Click the check button if you are experiencing nausea",
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 20,
@@ -164,41 +155,33 @@ class _BodyState extends State<Body> {
                                           ),
                                           Container(
                                               padding: EdgeInsets.fromLTRB(
-                                                  10, 23, 10, 0),
-                                              child: Center(
-                                                child: Row(
-                                                  mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: <Widget>[
-                                                  ClipRect(
-                                                      child: Container(
-                                                    width: 105.0,
-                                                    height: 105.0,
-                                                    decoration: BoxDecoration(
-                                                        image: DecorationImage(
-                                                            image: AssetImage(
-                                                                'assets/images/clogged.png'))),
-                                                    child: TextButton(
-                                                      //padding: EdgeInsets.all(0.0),
-                                                      onPressed: this.postClogged,
-                                                      child: Container(),
-                                                    ),
-                                                  )),
-                                                  ClipRect(
-                                                      child: Container(
-                                                    width: 105.0,
-                                                    height: 105.0,
-                                                    decoration: BoxDecoration(
-                                                        image: DecorationImage(
-                                                            image: AssetImage(
-                                                                'assets/images/runny.png'))),
-                                                    child: TextButton(
-                                                      //padding:EdgeInsets.all(0.0),
-                                                      onPressed: this.postRunny,
-                                                      child: Container(),
-                                                    ),
-                                                  )),
-                                                ]),
-                                              )),
+                                                  10, 15, 10, 15),
+                                              child: Row(children: <Widget>[
+                                                ClipRect(
+                                                    child: Container(
+                                                  width: 60.0,
+                                                  height: 60.0,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'assets/images/check5.png'))),
+                                                  child: TextButton(
+                                                    //padding: EdgeInsets.all(0.0),
+                                                    onPressed: this.postNausea,
+                                                    child: Container(),
+                                                  ),
+                                                )),
+                                                SizedBox(width: 20),
+                                                Text(
+                                                  "I am experiencing nausea.",
+                                                  style: TextStyle(
+                                                    //fontWeight: FontWeight.bold,
+                                                    fontSize: 16,
+                                                    color: Colors.black,
+                                                  ),
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                              ])),
                                         ],
                                       ))), //Applicable Container
                             ],

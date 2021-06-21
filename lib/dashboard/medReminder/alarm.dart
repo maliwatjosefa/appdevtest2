@@ -1,5 +1,7 @@
 import 'package:appdevnursie/dashboard/medReminder/reminder.dart';
 import 'package:flutter/material.dart';
+import 'package:appdevnursie/main.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class AddAlarm extends StatefulWidget {
   AddAlarm({Key key}) : super(key: key);
@@ -47,7 +49,8 @@ class _AddAlarmState extends State<AddAlarm> {
                   ),
                 ),
                 onTap: () {
-                  _selectTime(context);
+                  //_selectTime(context);
+                  scheduleAlarm();
                 },
               ),
               SizedBox(
@@ -122,22 +125,40 @@ class _AddAlarmState extends State<AddAlarm> {
 
   void _showAlertDialog()
   {
-      showDialog(
-          context: context,
-          barrierDismissible: true,
-          builder: (BuildContext context)
-          {
-              return AlertDialog(
+      
+         Text('Reminder set at \n\n$_selectedTime');
                 
-                content: new Text('Reminder set at \n\n$_selectedTime'),
-                actions: <Widget>[
-                  new FlatButton(
-                      onPressed: () => Navigator.of(context).pop(),
-                      child: new Text('OK')
-                  )
-                ],
-              );
-          }
-      );
+                  
+      
+  }
+
+  void scheduleAlarm() async {
+      var scheduledNotificationDateTime = 
+        DateTime.now().add(Duration(seconds: 5));
+      
+    var androidPlatformChannelSpecifics = AndroidNotificationDetails(
+      'alarm_notif',
+      'alarm_notif',
+      'Channel for Alarm notification',
+      icon: 'n_logo',
+      //sound: RawResourceAndroidNotificationSound('a_long_cold_sting'),
+      largeIcon: DrawableResourceAndroidBitmap('n_logo'),
+    );
+
+    var iOSPlatformChannelSpecifics = IOSNotificationDetails(
+        //sound: 'a_long_cold_sting.wav',
+        presentAlert: true,
+        presentBadge: true,
+        presentSound: true);
+    var platformChannelSpecifics = NotificationDetails(
+        androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
+
+    await flutterLocalNotificationsPlugin.schedule(
+      0,
+      'Medicine',
+      'Please drink your medicine.',
+      scheduledNotificationDateTime,
+      platformChannelSpecifics
+    );
   }
 }

@@ -1,11 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:appdevnursie/dashboard/journal/database.dart';
 import 'package:appdevnursie/dashboard/journal/journal.dart';
 import 'package:appdevnursie/dashboard/journal/post.dart';
 import 'package:appdevnursie/dashboard/journal/postlist.dart';
-import 'package:flutter/material.dart';
 
-
-class ColdsPage extends StatelessWidget {
+class BackPainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,16 +21,9 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   List<Post> posts = [];
 
-  void postClogged() {
-    var post = new Post("COLDS", "Clogged", new DateTime.now().toString());
-    post.setId(savePost(post));
-    this.setState(() {
-      posts.add(post);
-    });
-  }
-
-  void postRunny() {
-    var post = new Post("COUGH", "Runny Nose", new DateTime.now().toString());
+  void postBackPain() {
+    var post =
+        new Post("BACK PAIN", "Back Pain", new DateTime.now().toString());
     post.setId(savePost(post));
     this.setState(() {
       posts.add(post);
@@ -74,8 +66,8 @@ class _BodyState extends State<Body> {
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             alignment: Alignment.topCenter,
-                            image:
-                                AssetImage('assets/images/coldsHeader.png')))),
+                            image: AssetImage(
+                                'assets/images/backpainHeader.png')))),
                 new Padding(
                   padding: EdgeInsets.only(top: 55),
                   child: IconButton(
@@ -116,28 +108,27 @@ class _BodyState extends State<Body> {
                                   children: <Widget>[
                                     Text.rich(
                                         TextSpan(
-                                          text: "Colds",
+                                          text: "Back Pain",
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                        style: TextStyle(fontSize: 50)),
+                                        style: TextStyle(fontSize: 45)),
                                   ]),
                               new Container(
-                                padding: EdgeInsets.fromLTRB(28, 110, 30, 1),
+                                padding: EdgeInsets.fromLTRB(32, 102, 40, 1),
                                 child: Text(
-                                  "The common cold is medically referred to as a viral upper respiratory tract infection.",
+                                  "Back pain can range from a muscle aching to a shooting, burning or stabbing sensation. In addition, the pain may radiate down your leg or worsen with bending, twisting, lifting, standing or walking.",
                                   style: TextStyle(
                                     fontWeight: FontWeight.normal,
-                                    fontSize: 18,
+                                    fontSize: 16,
                                     color: Colors.black,
                                   ),
                                   textAlign: TextAlign.justify,
                                 ),
                               ),
                               Container(
-                                height: 210,
-                                  margin: EdgeInsets.only(top: 40),
+                                  margin: EdgeInsets.only(top: 50),
                                   child: Card(
                                       color: Color(0xffe7ecf0),
                                       shape: RoundedRectangleBorder(
@@ -149,10 +140,11 @@ class _BodyState extends State<Body> {
                                             MainAxisAlignment.center,
                                         children: <Widget>[
                                           Container(
-                                            padding: EdgeInsets.only(top: 10),
+                                            padding: EdgeInsets.fromLTRB(
+                                                10, 10, 10, 10),
                                             child: Center(
                                               child: Text(
-                                                "Click on the buttons that are applicable.",
+                                                "Click the check button if you have back pain",
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 20,
@@ -164,41 +156,34 @@ class _BodyState extends State<Body> {
                                           ),
                                           Container(
                                               padding: EdgeInsets.fromLTRB(
-                                                  10, 23, 10, 0),
-                                              child: Center(
-                                                child: Row(
-                                                  mainAxisAlignment: MainAxisAlignment.center,
-                                                  children: <Widget>[
-                                                  ClipRect(
-                                                      child: Container(
-                                                    width: 105.0,
-                                                    height: 105.0,
-                                                    decoration: BoxDecoration(
-                                                        image: DecorationImage(
-                                                            image: AssetImage(
-                                                                'assets/images/clogged.png'))),
-                                                    child: TextButton(
-                                                      //padding: EdgeInsets.all(0.0),
-                                                      onPressed: this.postClogged,
-                                                      child: Container(),
-                                                    ),
-                                                  )),
-                                                  ClipRect(
-                                                      child: Container(
-                                                    width: 105.0,
-                                                    height: 105.0,
-                                                    decoration: BoxDecoration(
-                                                        image: DecorationImage(
-                                                            image: AssetImage(
-                                                                'assets/images/runny.png'))),
-                                                    child: TextButton(
-                                                      //padding:EdgeInsets.all(0.0),
-                                                      onPressed: this.postRunny,
-                                                      child: Container(),
-                                                    ),
-                                                  )),
-                                                ]),
-                                              )),
+                                                  10, 15, 10, 15),
+                                              child: Row(children: <Widget>[
+                                                ClipRect(
+                                                    child: Container(
+                                                  width: 60.0,
+                                                  height: 60.0,
+                                                  decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                          image: AssetImage(
+                                                              'assets/images/check5.png'))),
+                                                  child: TextButton(
+                                                    //padding: EdgeInsets.all(0.0),
+                                                    onPressed:
+                                                        this.postBackPain,
+                                                    child: Container(),
+                                                  ),
+                                                )),
+                                                SizedBox(width: 20),
+                                                Text(
+                                                  "I am experiencing back pain.",
+                                                  style: TextStyle(
+                                                    //fontWeight: FontWeight.bold,
+                                                    fontSize: 16,
+                                                    color: Colors.black,
+                                                  ),
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                              ])),
                                         ],
                                       ))), //Applicable Container
                             ],

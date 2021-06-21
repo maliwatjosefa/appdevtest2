@@ -1,3 +1,4 @@
+import 'package:appdevnursie/dashboard/journal/journal.dart';
 import 'package:appdevnursie/screens/register.dart';
 import 'package:appdevnursie/screens/dashboard.dart';
 import 'package:appdevnursie/screens/forgotpw.dart';
@@ -5,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:flutter/material.dart';
 import 'package:appdevnursie/services/authentication.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Login extends StatefulWidget {
   final Function toggleScreen;
@@ -46,7 +48,8 @@ class _LoginState extends State<Login> {
             ),
             child: Form(
                 key: _formkey,
-                child: Column(children: [
+                child: Column(
+                  children: [
                   SingleChildScrollView(
                     child: Container(
                       child: Padding(
@@ -90,11 +93,17 @@ class _LoginState extends State<Login> {
                               children: <Widget>[
                                 GestureDetector(
                                   onTap: () {
+                                    
+                                    // Navigator.push(
+                                    //     context,
+                                    //     MaterialPageRoute(
+                                    //         builder: (context) =>
+                                    //             ForgotPassword()));
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                ForgotPassword()));
+                                                Dashboard()));
                                   },
                                   child: Container(
                                     child: Text(
@@ -172,17 +181,20 @@ class _LoginState extends State<Login> {
                                       children: <Widget>[
                                         SignInButton(Buttons.GoogleDark,
                                             onPressed: () {
-                                              AuthenticationService().signWithGoogle().then((UserCredential value ) {
-                                                final displayName = value.user.displayName;
+                                          AuthenticationService()
+                                              .signWithGoogle()
+                                              .then((UserCredential value) {
+                                            final displayName =
+                                                value.user.displayName;
 
-                                                print(displayName);
+                                            print(displayName);
 
-                                                Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (ctx) =>
-                                                          Dashboard()));
-                                              });
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (ctx) =>
+                                                        Dashboard()));
+                                          });
                                         }),
                                       ],
                                     ),
@@ -218,7 +230,6 @@ class _LoginState extends State<Login> {
                                 ),
                               ],
                             ),
-                            
                           ],
                         ),
                       ),

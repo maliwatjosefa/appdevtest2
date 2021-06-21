@@ -1,11 +1,21 @@
+import 'package:appdevnursie/dashboard/homeremedy/appetite.dart';
+import 'package:appdevnursie/dashboard/homeremedy/backpain.dart';
 import 'package:appdevnursie/dashboard/homeremedy/cold-remedy.dart';
 import 'package:appdevnursie/dashboard/homeremedy/cough-remedy.dart';
 import 'package:appdevnursie/dashboard/homeremedy/fever-remedy.dart';
 import 'package:appdevnursie/dashboard/homeremedy/headache-remedy.dart';
+import 'package:appdevnursie/dashboard/homeremedy/muscle-pain.dart';
+import 'package:appdevnursie/dashboard/homeremedy/nausea.dart';
+import 'package:appdevnursie/dashboard/homeremedy/red-spots.dart';
+import 'package:appdevnursie/dashboard/homeremedy/runny-nose.dart';
 import 'package:appdevnursie/dashboard/homeremedy/stomachache.dart';
-import 'package:appdevnursie/dashboard/homeremedy/taste-remedy.dart';
+import 'package:appdevnursie/dashboard/journal/backpain.dart';
+import 'package:appdevnursie/dashboard/journal/muscle-pain.dart';
+import 'package:appdevnursie/dashboard/journal/nausea.dart';
+import 'package:appdevnursie/dashboard/journal/red-spots.dart';
+import 'package:appdevnursie/dashboard/journal/runny-nose.dart';
+import 'package:appdevnursie/dashboard/journal/smell.dart';
 import 'package:appdevnursie/screens/dashboard.dart';
-//import 'package:appdevnursie/homepage.dart';
 import 'package:flutter/material.dart';
 
 class RemediesPage extends StatefulWidget {
@@ -22,7 +32,6 @@ class _RemediesPageState extends State<RemediesPage> {
         body: Stack(
           children: <Widget>[
             Container(
-                //height: 800,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         alignment: Alignment.topCenter,
@@ -49,7 +58,7 @@ class _RemediesPageState extends State<RemediesPage> {
             ),
             SafeArea(
                 child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 40, 20, 10),
+                    padding: EdgeInsets.fromLTRB(20, 30, 20, 10),
                     child: Column(
                       children: <Widget>[
                         Container(
@@ -124,7 +133,10 @@ class _RemediesPageState extends State<RemediesPage> {
                                 padding: EdgeInsets.all(0.0),
                                 onPressed: () {
                                   Navigator.push(
-        context, MaterialPageRoute(builder: (context) => HeadacheRemedy()));
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              HeadacheRemedy()));
                                 },
                                 //  () {
                                 //debugPrint('Fever Button');
@@ -173,15 +185,11 @@ class _RemediesPageState extends State<RemediesPage> {
                                       MaterialPageRoute(
                                           builder: (context) => CoughRemedy()));
                                 },
-                                //  () {
-                                //debugPrint('Fever Button');
-                                //},
                                 child: null,
                               ),
                             )),
                             ClipRect(
                                 child: Container(
-                              //transformAlignment: Alignment(5, -5),
                               width: 125.0,
                               height: 125.0,
                               decoration: BoxDecoration(
@@ -196,35 +204,146 @@ class _RemediesPageState extends State<RemediesPage> {
                                       MaterialPageRoute(
                                           builder: (context) => ColdRemedy()));
                                 },
-                                //  () {
-                                //debugPrint('Fever Button');
-                                //},
                                 child: null,
                               ),
                             )),
                             ClipRect(
                                 child: Container(
-                              //transformAlignment: Alignment(5, -5),
                               width: 125.0,
                               height: 125.0,
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image: AssetImage(
-                                          'assets/images/taste.png'))),
+                                          'assets/images/loss of smell.png'))),
                               child: FlatButton(
                                 padding: EdgeInsets.all(0.0),
                                 onPressed: () {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => TasteRemedy()));
+                                          builder: (context) => SmellPage()));
                                 },
-                                //  () {
-                                //debugPrint('Fever Button');
-                                //},
                                 child: null,
                               ),
-                            ))
+                            )),
+                            ClipRect(
+                                child: Container(
+                              width: 125.0,
+                              height: 125.0,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/Jnausea.png'))),
+                              child: FlatButton(
+                                padding: EdgeInsets.all(0.0),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => NauseaRemedy()));
+                                },
+                                child: null,
+                              ),
+                            )),
+                            ClipRect(
+                                child: Container(
+                              width: 125.0,
+                              height: 125.0,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/Jmuscle pain.png'))),
+                              child: FlatButton(
+                                padding: EdgeInsets.all(0.0),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Muscle()));
+                                },
+                                child: null,
+                              ),
+                            )),
+                            ClipRect(
+                                child: Container(
+                              width: 125.0,
+                              height: 125.0,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/Jred spots.png'))),
+                              child: FlatButton(
+                                padding: EdgeInsets.all(0.0),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              RedSpots()));
+                                },
+                                child: null,
+                              ),
+                            )),
+                            ClipRect(
+                                child: Container(
+                              width: 125.0,
+                              height: 125.0,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/JbackPain.png'))),
+                              child: FlatButton(
+                                padding: EdgeInsets.all(0.0),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              BackPain()));
+                                },
+                                child: null,
+                              ),
+                            )),
+                            ClipRect(
+                                child: Container(
+                              width: 125.0,
+                              height: 125.0,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/Jrunny.png'))),
+                              child: FlatButton(
+                                padding: EdgeInsets.all(0.0),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              Runny()));
+                                },
+                                child: null,
+                              ),
+                            )),
+                            ClipRect(
+                                child: Container(
+                              width: 125.0,
+                              height: 125.0,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/appetite5.png'))),
+                              child: FlatButton(
+                                padding: EdgeInsets.all(0.0),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              Appetite()));
+                                },
+                                child: null,
+                              ),
+                            )),
                           ],
                           crossAxisCount: 2,
                         )),

@@ -148,7 +148,7 @@ class _BodyState extends State<Body> {
                             image: AssetImage('assets/images/headacheHeader.png')))
                   ),
                   new Padding(
-                    padding: EdgeInsets.only(top:30),
+                    padding: EdgeInsets.only(top:55),
                     child: IconButton(
                             alignment: Alignment.topLeft,
                             icon: Icon(Icons.arrow_back_rounded), 
@@ -206,7 +206,7 @@ class _BodyState extends State<Body> {
                   ), 
                   new SafeArea(
                     child: Padding(
-                      padding: EdgeInsets.fromLTRB(20,55,20,0),
+                      padding: EdgeInsets.fromLTRB(20,40,20,0),
                       child: Column(children: <Widget>[
                         new Container(
                           //height: 713,
@@ -225,18 +225,18 @@ class _BodyState extends State<Body> {
                               ]
                             ),
                             new Container(
-                              padding: EdgeInsets.fromLTRB(43, 110, 40, 1),
+                              padding: EdgeInsets.fromLTRB(43, 90, 40, 1),
                               child: Text("Headaches are unpleasant pains in your head that can cause pressure and aching. The pain can range from mild to severe, and they usually occur on both sides of your head.",
                                 style: TextStyle(
                                   fontWeight: FontWeight.normal,
                                   fontSize: 18,
                                   color: Colors.black,
                                 ),
-                                textAlign: TextAlign.center,
+                                textAlign: TextAlign.justify,
                               ),
                             ),
                             new Container(
-                              margin: EdgeInsets.only(top: 77),
+                              margin: EdgeInsets.only(top: 65),
                               child: Card(
                                 color: Color(0xffe7ecf0),
                                 shape: 

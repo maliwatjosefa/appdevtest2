@@ -1,7 +1,7 @@
 import 'package:appdevnursie/dashboard/homeremedy/remedies.dart';
 import 'package:flutter/material.dart';
 
-class MusclePain extends StatelessWidget {
+class Muscle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;

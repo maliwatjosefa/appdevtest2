@@ -67,7 +67,7 @@ class _BodyState extends State<Body> {
                         image: AssetImage('assets/images/feverHeader.png')))
               ),
               new Padding(
-                padding: EdgeInsets.only(top:30),
+                padding: EdgeInsets.only(top:55),
                 child: IconButton(
                         alignment: Alignment.topLeft,
                         icon: Icon(Icons.arrow_back_rounded), 
@@ -105,17 +105,19 @@ class _BodyState extends State<Body> {
               ),
               new SafeArea(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(20,70,20,20),
+                  padding: EdgeInsets.fromLTRB(20,40,20,20),
                   child: Column(children: <Widget>[
                     new Container(
                       //height: 150,
-                      margin: EdgeInsets.only(bottom: 60),
-                      child: Column(children: <Widget>[
+                      //margin: EdgeInsets.only(top: 0),
+                      child: Column(
+                        children: <Widget>[
                         new Row(
                           mainAxisAlignment: MainAxisAlignment.start,
+                          
                           children: <Widget>[ 
                             Text.rich(TextSpan(
-                              text: "  Fever",
+                              text: "Fever",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 //fontFamily: "Caveat", 
@@ -125,7 +127,7 @@ class _BodyState extends State<Body> {
                           ]
                         ),
                         new Container(
-                          padding: EdgeInsets.fromLTRB(20, 120, 40, 20),
+                          padding: EdgeInsets.fromLTRB(20, 110, 40, 20),
                           child: Text("A fever is a body temperature that is higher than normal. The average body temperature is 37°C (98.6°F) but normal body temperature can range between 36.1°C (97°F) and 37.2°C (99°F) or more.",
                             style: TextStyle(
                               fontWeight: FontWeight.normal,

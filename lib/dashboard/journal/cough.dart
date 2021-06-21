@@ -4,7 +4,6 @@ import 'package:appdevnursie/dashboard/journal/post.dart';
 import 'package:appdevnursie/dashboard/journal/postlist.dart';
 import 'package:flutter/material.dart';
 
-
 class CoughPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -85,7 +84,7 @@ class _BodyState extends State<Body> {
                             image:
                                 AssetImage('assets/images/coughHeader.png')))),
                 new Padding(
-                  padding: EdgeInsets.only(top: 30),
+                  padding: EdgeInsets.only(top: 55),
                   child: IconButton(
                       alignment: Alignment.topLeft,
                       icon: Icon(Icons.arrow_back_rounded),
@@ -112,7 +111,7 @@ class _BodyState extends State<Body> {
                 ),
                 new SafeArea(
                     child: Padding(
-                        padding: EdgeInsets.fromLTRB(20, 58, 20, 0),
+                        padding: EdgeInsets.fromLTRB(20, 40, 20, 0),
                         child: Column(children: <Widget>[
                           new Container(
                               //height: 713,
@@ -132,7 +131,7 @@ class _BodyState extends State<Body> {
                                         style: TextStyle(fontSize: 50)),
                                   ]),
                               new Container(
-                                padding: EdgeInsets.fromLTRB(33, 120, 36, 1),
+                                padding: EdgeInsets.fromLTRB(33, 90, 36, 1),
                                 child: Text(
                                   "A cough, also known as tussis, is    a voluntary or involuntary act that clears the throat and breathing passage of foreign particles, microbes, irritants, fluids, and mucus.",
                                   style: TextStyle(
@@ -140,10 +139,11 @@ class _BodyState extends State<Body> {
                                     fontSize: 18,
                                     color: Colors.black,
                                   ),
-                                  textAlign: TextAlign.center,
+                                  textAlign: TextAlign.justify,
                                 ),
                               ),
                               Container(
+                                height: 210,
                                   margin: EdgeInsets.only(top: 21),
                                   child: Card(
                                       color: Color(0xffe7ecf0),
@@ -195,7 +195,7 @@ class _BodyState extends State<Body> {
                                                   decoration: BoxDecoration(
                                                       image: DecorationImage(
                                                           image: AssetImage(
-                                                              'assets/images/itchy throat.png'))),
+                                                              'assets/images/itchy.png'))),
                                                   child: TextButton(
                                                     //padding:EdgeInsets.all(0.0),
                                                     onPressed:

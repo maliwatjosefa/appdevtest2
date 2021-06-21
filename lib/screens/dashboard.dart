@@ -2,6 +2,7 @@ import 'package:appdevnursie/dashboard/journal/journal.dart';
 import 'package:appdevnursie/dashboard/medReminder/reminder.dart';
 import 'package:appdevnursie/dashboard/homeremedy/remedies.dart';
 import 'package:appdevnursie/dashboard/user-profile2.dart';
+import 'package:appdevnursie/screens/emergency.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -17,11 +18,10 @@ class Dashboard extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/dashboard_wp.png'),
-              fit: BoxFit.cover),
+              image: AssetImage('assets/images/dash.png'), fit: BoxFit.cover),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(top: 5),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -107,34 +107,33 @@ class Dashboard extends StatelessWidget {
                   enlargeCenterPage: true,
                   aspectRatio: 20,
                   enableInfiniteScroll: false,
-                  viewportFraction: 0.7,
+                  viewportFraction: 0.6,
                   scrollDirection: Axis.horizontal,
                 ),
               ),
-              Exit(),
+              Padding(
+                padding: const EdgeInsets.only(top: 80),
+                child: ClipRect(
+                    child: Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/images/redBtn.png'))),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (ctx) => Emergency()));
+                    },
+
+                    child: Container(),
+                  ),
+                )),
+              )
             ],
           ),
         ),
       ),
     ));
-  }
-}
-
-class Exit extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(top: 55),
-      child: Padding(
-        padding: const EdgeInsets.only(top: 20, left: 305, right: 10),
-        child: FloatingActionButton(
-          onPressed: () => exit(0),
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.black,
-          tooltip: 'Close app',
-          child: new Icon(Icons.exit_to_app_outlined),
-        ),
-      ),
-    );
   }
 }

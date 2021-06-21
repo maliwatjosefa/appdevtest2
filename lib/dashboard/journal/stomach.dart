@@ -5,7 +5,6 @@ import 'package:appdevnursie/dashboard/journal/postlist.dart';
 import 'package:appdevnursie/dashboard/journal/widgets.dart';
 import 'package:flutter/material.dart';
 
-
 class StomachachePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -130,7 +129,7 @@ class _BodyState extends State<Body> {
                             image: AssetImage(
                                 'assets/images/stomachacheHeader.png')))),
                 new Padding(
-                  padding: EdgeInsets.only(top: 30),
+                  padding: EdgeInsets.only(top: 55),
                   child: IconButton(
                       alignment: Alignment.topLeft,
                       icon: Icon(Icons.arrow_back_rounded),
@@ -185,7 +184,7 @@ class _BodyState extends State<Body> {
                 ),
                 new SafeArea(
                     child: Padding(
-                        padding: EdgeInsets.fromLTRB(20, 63, 20, 0),
+                        padding: EdgeInsets.fromLTRB(20, 40, 20, 0),
                         child: Column(children: <Widget>[
                           new Container(
                               //height: 713,
@@ -205,7 +204,7 @@ class _BodyState extends State<Body> {
                                         style: TextStyle(fontSize: 40)),
                                   ]),
                               new Container(
-                                padding: EdgeInsets.fromLTRB(36, 120, 36, 1),
+                                padding: EdgeInsets.fromLTRB(36, 105, 36, 1),
                                 child: Text(
                                   "Stomachache is pain that occurs between the chest and pelvic regions. It can be crampy, achy, dull, intermittent or sharp. It’s also called an abdominal pain.",
                                   style: TextStyle(
@@ -213,7 +212,7 @@ class _BodyState extends State<Body> {
                                     fontSize: 18,
                                     color: Colors.black,
                                   ),
-                                  textAlign: TextAlign.center,
+                                  textAlign: TextAlign.justify,
                                 ),
                               ),
                               Container(
