@@ -143,7 +143,7 @@ class _BodyState extends State<Body> {
                                 ),
                               ),
                               Container(
-                                height: 210,
+                                  height: 210,
                                   margin: EdgeInsets.only(top: 21),
                                   child: Card(
                                       color: Color(0xffe7ecf0),
@@ -182,7 +182,6 @@ class _BodyState extends State<Body> {
                                                           image: AssetImage(
                                                               'assets/images/dry-cough.png'))),
                                                   child: TextButton(
-                                                    //padding: EdgeInsets.all(0.0),
                                                     onPressed:
                                                         this.postDryCough,
                                                     child: Container(),
@@ -197,7 +196,6 @@ class _BodyState extends State<Body> {
                                                           image: AssetImage(
                                                               'assets/images/itchy.png'))),
                                                   child: TextButton(
-                                                    //padding:EdgeInsets.all(0.0),
                                                     onPressed:
                                                         this.postItchyThroat,
                                                     child: Container(),
@@ -212,16 +210,15 @@ class _BodyState extends State<Body> {
                                                           image: AssetImage(
                                                               'assets/images/-phlegm.png'))),
                                                   child: TextButton(
-                                                    //padding:EdgeInsets.all(0.0),
                                                     onPressed: this.postPhlegm,
                                                     child: Container(),
                                                   ),
                                                 )),
                                               ])),
                                         ],
-                                      ))), //Applicable Container
+                                      ))),
                             ],
-                          )), //Safe Area Container
+                          )),
                         ]))),
               ],
             ),

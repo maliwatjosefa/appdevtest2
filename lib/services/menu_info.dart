@@ -1,4 +1,3 @@
-import 'package:appdevnursie/enums.dart';
 import 'package:flutter/foundation.dart';
 
 class MenuInfo extends ChangeNotifier {
@@ -13,7 +12,8 @@ class MenuInfo extends ChangeNotifier {
     this.title = menuInfo.title;
     this.imageSource = menuInfo.imageSource;
 
-//Important
     notifyListeners();
   }
 }
+
+enum MenuType { clock, alarm, timer, stopwatch }

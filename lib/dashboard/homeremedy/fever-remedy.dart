@@ -11,29 +11,28 @@ class FeverRemedy extends StatelessWidget {
           Container(
             height: size.height * 0.35,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(27),
-                    bottomRight: Radius.circular(27)),
-                color: Color(0xffadddce),
-                image: DecorationImage(
-                    image: AssetImage(
-                      'assets/images/fever2.png',
-                    ),
-                    fit: BoxFit.none,
-                    alignment: Alignment.centerRight),
-                    
-                    ),
-                    
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(27),
+                  bottomRight: Radius.circular(27)),
+              color: Color(0xffadddce),
+              image: DecorationImage(
+                  image: AssetImage(
+                    'assets/images/fever2.png',
+                  ),
+                  fit: BoxFit.none,
+                  alignment: Alignment.centerRight),
+            ),
           ),
           Padding(
-          padding: EdgeInsets.only(top:50),
-          child: IconButton(
-                  alignment: Alignment.topLeft,
-                  icon: Icon(Icons.arrow_back), 
-                  onPressed: () {
-                     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => RemediesPage()));
-                  }),),
+            padding: EdgeInsets.only(top: 50),
+            child: IconButton(
+                alignment: Alignment.topLeft,
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => RemediesPage()));
+                }),
+          ),
           SafeArea(
               child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -155,10 +154,6 @@ class FeverRemedy extends StatelessWidget {
                     ),
                   ),
                 ),
-
-
-
-
                 SizedBox(
                   width: size.width * 0.05,
                   height: size.height * 0.01,

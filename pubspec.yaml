@@ -1,12 +1,11 @@
 name: appdevnursie
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none' 
 version: 1.0.0+1
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
-  #sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -20,14 +19,6 @@ dependencies:
   firebase_database: ^6.0.0
   fluttertoast: ^7.1.8
   flutter_local_notifications: ^1.4.4+2
-  dotted_border: ^1.0.5
-  intl : ^0.16.1
-  rxdart: ^0.22.2
-  sqflite: ^1.3.0
-  
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
   flutter_icons: ^1.1.0
   percent_indicator: ^2.1.9
   carousel_slider: ^2.0.0
@@ -38,6 +29,10 @@ dev_dependencies:
   flutter_facebook_auth: "^1.0.0"
   animated_floatactionbuttons: ^0.1.0
 
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
 flutter:
 
   uses-material-design: true
@@ -176,6 +171,8 @@ flutter:
     - assets/images/dash.png
     - assets/images/redBtn.png
     - assets/images/emergency.png
-    - assets/images/emergency2.png
     - assets/images/n_logo.png
+    - assets/images/maps.png
+    - assets/images/location.png
+    - assets/images/app.png
 

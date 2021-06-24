@@ -29,13 +29,12 @@ class _PostListState extends State<PostList> {
               color: Color(0xffefe6dd),
               child: Row(children: <Widget>[
                 Expanded(
-                  child: ListTile(
-                    title: Text(post.category),
-                    subtitle: Text(subtitle),
-                    isThreeLine: true, 
-                  )
-                ),
-          ]));
+                    child: ListTile(
+                  title: Text(post.category),
+                  subtitle: Text(subtitle),
+                  isThreeLine: true,
+                )),
+              ]));
         });
   }
 }

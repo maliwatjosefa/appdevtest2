@@ -102,13 +102,10 @@ class _BodyState extends State<Body> {
       backgroundColor: Color(0xffe7ecf0),
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
-          //child: ConstrainedBox(
-          //  constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height),
           child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Container(
-            //height: 795,
             child: Stack(
               children: <Widget>[
                 new Padding(
@@ -187,8 +184,6 @@ class _BodyState extends State<Body> {
                         padding: EdgeInsets.fromLTRB(20, 40, 20, 0),
                         child: Column(children: <Widget>[
                           new Container(
-                              //height: 713,
-                              //margin: EdgeInsets.only(bottom: 5),
                               child: Column(
                             children: <Widget>[
                               Row(
@@ -257,9 +252,7 @@ class _BodyState extends State<Body> {
                                                 TextInputWidget(this.newPost),
                                           )
                                         ],
-                                      ))
-                                  //child: TextInputWidget(this.newPost)
-                                  ),
+                                      ))),
                               Container(
                                   margin: EdgeInsets.only(top: 21),
                                   child: Card(
@@ -299,7 +292,6 @@ class _BodyState extends State<Body> {
                                                           image: AssetImage(
                                                               'assets/images/vomit.png'))),
                                                   child: TextButton(
-                                                    //padding: EdgeInsets.all(0.0),
                                                     onPressed: this.postVomit,
                                                     child: Container(),
                                                   ),
@@ -313,7 +305,6 @@ class _BodyState extends State<Body> {
                                                           image: AssetImage(
                                                               'assets/images/nausea.png'))),
                                                   child: TextButton(
-                                                    //padding:EdgeInsets.all(0.0),
                                                     onPressed: this.postNausea,
                                                     child: Container(),
                                                   ),
@@ -327,7 +318,6 @@ class _BodyState extends State<Body> {
                                                           image: AssetImage(
                                                               'assets/images/diarrhea.png'))),
                                                   child: TextButton(
-                                                    //padding:EdgeInsets.all(0.0),
                                                     onPressed:
                                                         this.postDiarrhea,
                                                     child: Container(),
@@ -381,7 +371,7 @@ class _BodyState extends State<Body> {
                                                 ))
                                               ])),
                                         ],
-                                      ))), //Applicable Container
+                                      ))),
                               Container(
                                   padding: EdgeInsets.fromLTRB(20, 28, 20, 0),
                                   child: Card(
@@ -424,11 +414,9 @@ class _BodyState extends State<Body> {
                                                 TextInputWidget(this.newPost),
                                           )
                                         ],
-                                      ))
-                                  //child: TextInputWidget(this.newPost)
-                                  )
+                                      )))
                             ],
-                          )), //Safe Area Container
+                          )),
                         ]))),
               ],
             ),
@@ -437,9 +425,7 @@ class _BodyState extends State<Body> {
               height: MediaQuery.of(context).size.width * 0.33,
               child: PostList(this.posts))
         ],
-      )
-          //)
-          ),
+      )),
     );
   }
 }

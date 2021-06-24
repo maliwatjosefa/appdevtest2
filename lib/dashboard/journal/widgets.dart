@@ -39,8 +39,6 @@ class _TextInputWidgetState extends State<TextInputWidget> {
                 tooltip: "Enter",
                 onPressed: this.click,
               ),
-              //contentPadding: EdgeInsets.all(3)
-              //suffixIconConstraints: BoxConstraints(maxHeight: 10, maxWidth: 10)),
             )));
   }
 }

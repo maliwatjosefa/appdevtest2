@@ -2,11 +2,10 @@ import 'package:appdevnursie/dashboard/journal/journal.dart';
 import 'package:appdevnursie/dashboard/medReminder/reminder.dart';
 import 'package:appdevnursie/dashboard/homeremedy/remedies.dart';
 import 'package:appdevnursie/dashboard/user-profile2.dart';
-import 'package:appdevnursie/screens/emergency.dart';
+import 'package:appdevnursie/screens/emergency2.dart';
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
 
 class Dashboard extends StatelessWidget {
   CarouselController buttonCarouselController = CarouselController();
@@ -123,9 +122,8 @@ class Dashboard extends StatelessWidget {
                   child: TextButton(
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (ctx) => Emergency()));
+                          MaterialPageRoute(builder: (ctx) => Emergency2()));
                     },
-
                     child: Container(),
                   ),
                 )),

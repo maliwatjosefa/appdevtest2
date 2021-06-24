@@ -20,7 +20,6 @@ class _RegisterState extends State<Register> {
   TextEditingController _bdayController = TextEditingController();
   TextEditingController _ageController = TextEditingController();
   final AuthenticationService _auth = AuthenticationService();
-
   final _formkey = GlobalKey<FormState>();
 
   @override
@@ -77,7 +76,6 @@ class _RegisterState extends State<Register> {
                                 }
                                 return null;
                               },
-                              //onSaved: (name) => user.name = name,
                             ),
                             SizedBox(height: 15),
                             TextFormField(
@@ -195,7 +193,7 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                   )
-                ])))); 
+                ]))));
   }
 
   void createUser() async {

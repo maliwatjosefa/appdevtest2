@@ -128,7 +128,6 @@ class _JournalPageState extends State<JournalPage> {
                                           text: "Journal",
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            //fontFamily: "Caveat"
                                           ),
                                         ),
                                         style: TextStyle(fontSize: 55)),
@@ -137,22 +136,17 @@ class _JournalPageState extends State<JournalPage> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     Text("Today, I had...",
-                                        style: TextStyle(
-                                          fontSize: 18
-                                          //fontFamily: "Roboto Mono"
-                                        )),
+                                        style: TextStyle(fontSize: 18)),
                                   ])
                             ])),
-                        
                         Expanded(
-                              child: GridView.count(
+                          child: GridView.count(
                             mainAxisSpacing: 10,
                             crossAxisSpacing: 10,
                             primary: false,
                             children: <Widget>[
                               ClipRect(
                                   child: Container(
-                                //transformAlignment: Alignment(5, -5),
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -160,15 +154,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/fever.png'))),
                                 child: TextButton(
-                                  //padding: EdgeInsets.all(0.0),
                                   onPressed: this.clickFever,
-                                  
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                //transformAlignment: Alignment(5, -5),
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -176,15 +167,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/headache.png'))),
                                 child: TextButton(
-                                  //padding: EdgeInsets.all(0.0),
                                   onPressed: this.clickHeadache,
-                                  
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                //transformAlignment: Alignment(5, -5),
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -192,15 +180,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/stomach.png'))),
                                 child: TextButton(
-                                  //padding: EdgeInsets.all(0.0),
                                   onPressed: this.clickStomachache,
-                                  
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                //transformAlignment: Alignment(5, -5),
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -208,15 +193,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/cough.png'))),
                                 child: TextButton(
-                                  
                                   onPressed: this.clickCough,
-                                  
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                               
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -224,15 +206,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/colds.png'))),
                                 child: TextButton(
-                                  
                                   onPressed: this.clickColds,
-                                  
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                //transformAlignment: Alignment(5, -5),
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -240,17 +219,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/loss of smell.png'))),
                                 child: TextButton(
-                                  //padding: EdgeInsets.all(0.0),
                                   onPressed: this.clickSmell,
-                                  //  () {
-                                  //debugPrint('Fever Button');
-                                  //},
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                //transformAlignment: Alignment(5, -5),
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -258,17 +232,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/Jnausea.png'))),
                                 child: TextButton(
-                                  //padding: EdgeInsets.all(0.0),
                                   onPressed: this.clickNausea,
-                                  //  () {
-                                  //debugPrint('Fever Button');
-                                  //},
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                //transformAlignment: Alignment(5, -5),
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -276,17 +245,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/Jmuscle pain.png'))),
                                 child: TextButton(
-                                  //padding: EdgeInsets.all(0.0),
                                   onPressed: this.clickMusclePain,
-                                  //  () {
-                                  //debugPrint('Fever Button');
-                                  //},
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                //transformAlignment: Alignment(5, -5),
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -294,15 +258,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/Jred spots.png'))),
                                 child: TextButton(
-                                  
                                   onPressed: this.clickRedSpots,
-                                  
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -310,15 +271,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/JbackPain.png'))),
                                 child: TextButton(
-                                 
                                   onPressed: this.clickBackPain,
-                                 
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -326,15 +284,12 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/Jrunny.png'))),
                                 child: TextButton(
-                                 
                                   onPressed: this.clickRunnyNose,
-                                  
                                   child: Container(),
                                 ),
                               )),
                               ClipRect(
                                   child: Container(
-                                
                                 width: 125.0,
                                 height: 125.0,
                                 decoration: BoxDecoration(
@@ -342,9 +297,7 @@ class _JournalPageState extends State<JournalPage> {
                                         image: AssetImage(
                                             'assets/images/appetite5.png'))),
                                 child: TextButton(
-                                 
                                   onPressed: this.clickAppetiteLoss,
-                                  
                                   child: Container(),
                                 ),
                               )),

@@ -11,29 +11,28 @@ class ColdRemedy extends StatelessWidget {
           Container(
             height: size.height * 0.36,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(27),
-                    bottomRight: Radius.circular(27)),
-                color: Color(0xffadddce),
-                image: DecorationImage(
-                    image: AssetImage(
-                      'assets/images/sneeze.png',
-                    ),
-                    fit: BoxFit.none,
-                    alignment: Alignment.centerRight),
-                    
-                    ),
-                    
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(27),
+                  bottomRight: Radius.circular(27)),
+              color: Color(0xffadddce),
+              image: DecorationImage(
+                  image: AssetImage(
+                    'assets/images/sneeze.png',
+                  ),
+                  fit: BoxFit.none,
+                  alignment: Alignment.centerRight),
+            ),
           ),
           Padding(
-          padding: EdgeInsets.only(top:50),
-          child: IconButton(
-                  alignment: Alignment.topLeft,
-                  icon: Icon(Icons.arrow_back), 
-                  onPressed: () {
-                     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => RemediesPage()));
-                  }),),
+            padding: EdgeInsets.only(top: 50),
+            child: IconButton(
+                alignment: Alignment.topLeft,
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => RemediesPage()));
+                }),
+          ),
           SafeArea(
               child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -97,14 +96,12 @@ class ColdRemedy extends StatelessWidget {
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
                 ),
-                
                 SizedBox(height: 10),
                 Text(
                   " - gargling salt and water that can help soothe a scratchy throat that causes you to cough. Mixing 1/4 to 1/2 teaspoon of salt with 8 ounces of warm water can help to relieve irritation",
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                 ),
-                
                 SizedBox(height: 10),
                 Text(
                   " - adding fresh lemon juice to hot tea with honey may reduce phlegm when you’re sick",
@@ -135,7 +132,6 @@ class ColdRemedy extends StatelessWidget {
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                 ),
-                
                 SizedBox(height: 10),
                 Text(
                   " - gargling salt and water that can help soothe a scratchy throat that causes you to cough. Mixing 1/4 to 1/2 teaspoon of salt with 8 ounces of warm water can help to relieve irritation",
@@ -154,7 +150,6 @@ class ColdRemedy extends StatelessWidget {
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                 ),
-
                 SizedBox(width: size.width * 0.08),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 20),
@@ -183,10 +178,6 @@ class ColdRemedy extends StatelessWidget {
                     ),
                   ),
                 ),
-
-
-
-
                 SizedBox(
                   width: size.width * 0.05,
                   height: size.height * 0.01,

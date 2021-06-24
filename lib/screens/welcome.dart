@@ -7,8 +7,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(milliseconds: 3000), () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (ctx) => Welcome()));
+      Navigator.push(context, MaterialPageRoute(builder: (ctx) => Welcome()));
     });
 
     return Scaffold(
@@ -43,8 +42,7 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(milliseconds: 3000), () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (ctx) => Login()));
+      Navigator.push(context, MaterialPageRoute(builder: (ctx) => Login()));
     });
 
     return Scaffold(

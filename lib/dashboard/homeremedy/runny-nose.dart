@@ -11,29 +11,28 @@ class Runny extends StatelessWidget {
           Container(
             height: size.height * 0.34,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(27),
-                    bottomRight: Radius.circular(27)),
-                color: Color(0xffadddce),
-                image: DecorationImage(
-                    image: AssetImage(
-                      'assets/images/smell-pic.png',
-                    ),
-                    fit: BoxFit.none,
-                    alignment: Alignment.centerRight),
-                    
-                    ),
-                    
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(27),
+                  bottomRight: Radius.circular(27)),
+              color: Color(0xffadddce),
+              image: DecorationImage(
+                  image: AssetImage(
+                    'assets/images/smell-pic.png',
+                  ),
+                  fit: BoxFit.none,
+                  alignment: Alignment.centerRight),
+            ),
           ),
           Padding(
-          padding: EdgeInsets.only(top:50),
-          child: IconButton(
-                  alignment: Alignment.topLeft,
-                  icon: Icon(Icons.arrow_back), 
-                  onPressed: () {
-                     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => RemediesPage()));
-                  }),),
+            padding: EdgeInsets.only(top: 50),
+            child: IconButton(
+                alignment: Alignment.topLeft,
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => RemediesPage()));
+                }),
+          ),
           SafeArea(
               child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -92,7 +91,6 @@ class Runny extends StatelessWidget {
                   width: size.width * 0.05,
                   height: size.height * 0.01,
                 ),
-                
                 Text(
                   "It can be helpful to stop runny nose by:",
                   textAlign: TextAlign.justify,

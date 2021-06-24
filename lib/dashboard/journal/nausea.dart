@@ -41,13 +41,10 @@ class _BodyState extends State<Body> {
       backgroundColor: Color(0xffe7ecf0),
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
-          //child: ConstrainedBox(
-          //  constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height),
           child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Container(
-            //height: 795,
             child: Stack(
               children: <Widget>[
                 new Padding(
@@ -98,8 +95,6 @@ class _BodyState extends State<Body> {
                         padding: EdgeInsets.fromLTRB(20, 40, 20, 0),
                         child: Column(children: <Widget>[
                           new Container(
-                              //height: 713,
-                              //margin: EdgeInsets.only(bottom: 5),
                               child: Column(
                             children: <Widget>[
                               Row(
@@ -166,7 +161,6 @@ class _BodyState extends State<Body> {
                                                           image: AssetImage(
                                                               'assets/images/check5.png'))),
                                                   child: TextButton(
-                                                    //padding: EdgeInsets.all(0.0),
                                                     onPressed: this.postNausea,
                                                     child: Container(),
                                                   ),
@@ -175,7 +169,6 @@ class _BodyState extends State<Body> {
                                                 Text(
                                                   "I am experiencing nausea.",
                                                   style: TextStyle(
-                                                    //fontWeight: FontWeight.bold,
                                                     fontSize: 16,
                                                     color: Colors.black,
                                                   ),
@@ -183,9 +176,9 @@ class _BodyState extends State<Body> {
                                                 ),
                                               ])),
                                         ],
-                                      ))), //Applicable Container
+                                      ))),
                             ],
-                          )), //Safe Area Container
+                          )),
                         ]))),
               ],
             ),
@@ -194,9 +187,7 @@ class _BodyState extends State<Body> {
               height: MediaQuery.of(context).size.width * 0.33,
               child: PostList(this.posts))
         ],
-      )
-          //)
-          ),
+      )),
     );
   }
 }

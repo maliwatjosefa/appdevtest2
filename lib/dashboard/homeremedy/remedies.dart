@@ -240,7 +240,8 @@ class _RemediesPageState extends State<RemediesPage> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => NauseaRemedy()));
+                                          builder: (context) =>
+                                              NauseaRemedy()));
                                 },
                                 child: null,
                               ),
@@ -278,8 +279,7 @@ class _RemediesPageState extends State<RemediesPage> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              RedSpots()));
+                                          builder: (context) => RedSpots()));
                                 },
                                 child: null,
                               ),
@@ -298,8 +298,7 @@ class _RemediesPageState extends State<RemediesPage> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              BackPain()));
+                                          builder: (context) => BackPain()));
                                 },
                                 child: null,
                               ),
@@ -318,8 +317,7 @@ class _RemediesPageState extends State<RemediesPage> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              Runny()));
+                                          builder: (context) => Runny()));
                                 },
                                 child: null,
                               ),
@@ -338,8 +336,7 @@ class _RemediesPageState extends State<RemediesPage> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              Appetite()));
+                                          builder: (context) => Appetite()));
                                 },
                                 child: null,
                               ),

@@ -108,7 +108,6 @@ class HeadacheRemedy extends StatelessWidget {
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                 ),
-                
                 SizedBox(height: 10),
                 Text(
                   " - applying peppermint essential oil to the temples has been shown to reduce the symptoms of tension headaches",
@@ -121,14 +120,12 @@ class HeadacheRemedy extends StatelessWidget {
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                 ),
-                
                 SizedBox(height: 10),
                 Text(
                   " - massaging your forehead, neck, and temples that can help ease a tension headache",
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                 ),
-
                 SizedBox(width: size.width * 0.08),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 20),
@@ -157,10 +154,6 @@ class HeadacheRemedy extends StatelessWidget {
                     ),
                   ),
                 ),
-
-
-
-
                 SizedBox(
                   width: size.width * 0.05,
                   height: size.height * 0.01,
@@ -170,7 +163,6 @@ class HeadacheRemedy extends StatelessWidget {
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                 ),
-                
                 SizedBox(height: 10),
                 Text(
                   " - Get adequate sleep of seven to nine hours per night.",

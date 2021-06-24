@@ -108,7 +108,6 @@ class SmellRemedy extends StatelessWidget {
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                 ),
-                
                 SizedBox(width: size.width * 0.08),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 20),
@@ -141,7 +140,6 @@ class SmellRemedy extends StatelessWidget {
                   width: size.width * 0.05,
                   height: size.height * 0.01,
                 ),
-                
                 Text(
                   " There’s no sure way to prevent the loss of smell. You can minimize the risk of contracting colds or bacterial infections by taking the following steps:",
                   textAlign: TextAlign.justify,
